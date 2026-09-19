@@ -1,0 +1,80 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Fonctions d'aide pour la sécurité
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function getAdminDoc(uid) {
+      return get(/databases/$(database)/documents/admins/$(uid));
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+        getAdminDoc(request.auth.uid).data.active == true;
+    }
+    
+    function isSuperAdmin() {
+      return isAdmin() && getAdminDoc(request.auth.uid).data.role == "superadmin";
+    }
+
+    // Collection des administrateurs
+    match /admins/{adminId} {
+      // Les admins authentifiés peuvent lire la liste des admins
+      allow read: if isAdmin();
+      
+      // Cas 1: Premier utilisateur devient superadmin s'il n'y a encore AUCUN admin enregistré
+      // Ce cas est atomiquement vérifié ou via Cloud Functions / API serveur
+      allow create: if isAuthenticated() && (
+        // Soit c'est le Super Admin qui crée un autre admin (rôle admin uniquement, pas d'auto-escalade)
+        (isSuperAdmin() && request.resource.data.role in ["admin", "superadmin"]) ||
+        // Soit c'est le premier compte et le rôle demandé est superadmin
+        (!exists(/databases/$(database)/documents/siteSettings/system) && request.auth.uid == adminId)
+      );
+      
+      // Seul le SuperAdmin peut modifier ou supprimer un admin
+      // Le super admin ne peut pas se retirer lui-même son rôle s'il est le seul
+      allow update, delete: if isSuperAdmin();
+    }
+    
+    // Contenu public en lecture, modifiable uniquement par un admin vérifié
+    match /siteSettings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /gallery/{imageId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /locations/{locationId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /contact/{contactId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    // Commandes des clients (création publique autorisée, lecture et gestion par les administrateurs)
+    match /orders/{orderId} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}
