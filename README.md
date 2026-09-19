@@ -52,3 +52,22 @@ Les règles de sécurité Firestore sont prêtes dans `firestore.rules` et les r
 - **Démarrage local** : `npm run dev` (disponible sur http://localhost:3000)
 - **Vérification TypeScript & Lint** : `npm run lint`
 - **Build de production** : `npm run build`
+
+---
+
+## 4. Déploiement sur GitHub Pages (Résolution de la page blanche)
+
+Le problème de la page blanche sur GitHub Pages provient des chemins absolus (`/assets/...`) lorsque le site est hébergé dans un sous-dossier de dépôt (ex: `https://username.github.io/repo-name/`).
+
+### Modifications déjà appliquées pour vous :
+1. **`base: './'` dans `vite.config.ts`** : Tous les scripts JS, CSS et polices sont désormais compilés avec des chemins relatifs.
+2. **Chemins d'images relatifs (`./images/...`)** : Toutes les photos de la carte et de la galerie se chargent sans erreur 404.
+3. **Fichier `public/.nojekyll`** : Empêche le moteur Jekyll de GitHub d'ignorer les fichiers nécessaires.
+4. **Workflow automatique `.github/workflows/deploy.yml`** : GitHub Actions compile et déploie automatiquement le site à chaque push sur `main`.
+
+### Comment l'activer sur votre dépôt GitHub :
+1. Poussez votre code sur GitHub.
+2. Allez dans votre dépôt sur **Settings** > **Pages** (dans le menu de gauche).
+3. Dans la section **Build and deployment** > **Source** :
+   - Choisissez **GitHub Actions**.
+4. GitHub Actions exécutera automatiquement le workflow et votre site sera en ligne sans page blanche !

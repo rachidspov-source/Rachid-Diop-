@@ -2,5 +2,7 @@
   "name": "Burger & Co",
   "description": "Site officiel et espace d'administration de Burger & Co (@burger_and_co_sn) - Burgers gourmands premium, menu interactif, localisation et commandes.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

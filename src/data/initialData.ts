@@ -5,7 +5,7 @@ export const INITIAL_SITE_DATA: SiteData = {
     title: 'BURGER & CO',
     subtitle: 'Le goût qui fait la différence.',
     tagline: 'Artisan Burger & Smash Bar',
-    heroImage: '/images/burger_signature.jpg',
+    heroImage: './images/burger_signature.jpg',
     ctaPrimaryText: 'Découvrir le menu',
     ctaSecondaryText: 'Nous trouver & Horaires',
     badgeText: 'Recettes signatures & Viande 100% fraîche'
@@ -30,7 +30,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       { days: 'Livraison à domicile', hours: '18h00 - 01h30' }
     ],
     aboutText: 'Chez Burger & Co, chaque burger est préparé à la commande avec des ingrédients frais sélectionnés avec soin. Nos pains briochés sont dorés chaque matin, nos viandes sont hachées sur place et nos sauces maison apportent cette signature unique qui réveille vos papilles.',
-    aboutImage: '/images/bbq_burger.jpg',
+    aboutImage: './images/bbq_burger.jpg',
     stats: [
       { label: 'Recettes Signatures', value: '15+' },
       { label: 'Sauces Secrètes Maison', value: '6' },
@@ -41,7 +41,7 @@ export const INITIAL_SITE_DATA: SiteData = {
   seo: {
     metaTitle: 'Burger & Co | Le goût qui fait la différence - @burger_and_co_sn',
     metaDescription: 'Découvrez la nouvelle carte Burger & Co : burgers signatures, smash croustillants, assiettes kafta, tenders et milkshakes à Dakar.',
-    ogImage: '/images/burger_signature.jpg',
+    ogImage: './images/burger_signature.jpg',
     keywords: 'burger, smash burger, dakar, burger and co, burger_and_co_sn, fast food gourmet dakar'
   },
   categories: [
@@ -59,7 +59,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: 'Pain brioché toasté au beurre, steak pur bœuf pressé minute, double cheddar américain fondu, pickles craquants, oignons émincés et sauce secrète Burger & Co.',
       price: 4500,
       category: 'cat-burgers',
-      imageUrl: '/images/double_cheeseburger.jpg',
+      imageUrl: './images/double_cheeseburger.jpg',
       badge: 'Best-seller',
       available: true,
       order: 1
@@ -70,7 +70,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: 'Deux steaks pur bœuf grillés, quadruple cheddar fondant, oignons dorés caramélisés et sauce signature dans un pain brioché moelleux.',
       price: 5500,
       category: 'cat-burgers',
-      imageUrl: '/images/burger_signature.jpg',
+      imageUrl: './images/burger_signature.jpg',
       badge: 'Gourmand',
       available: true,
       order: 2
@@ -81,7 +81,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: 'Pur bœuf croustillant, tranches de bacon grillé fumé, cheddar affiné, rondelles d\'oignons croustillantes et généreuse sauce BBQ maison.',
       price: 6000,
       category: 'cat-burgers',
-      imageUrl: '/images/bbq_burger.jpg',
+      imageUrl: './images/bbq_burger.jpg',
       badge: 'Populaire',
       available: true,
       order: 3
@@ -92,7 +92,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: 'Filet de poulet croustillant mariné au babeurre, panure dorée aux 7 épices, fromage fondant, salade iceberg fraîche, pickles et mayo pimentée douce.',
       price: 5000,
       category: 'cat-burgers',
-      imageUrl: '/images/crispy_chicken.jpg',
+      imageUrl: './images/crispy_chicken.jpg',
       badge: 'Croustillant',
       available: true,
       order: 4
@@ -114,7 +114,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: 'Spécialité maison : brochettes de viande de kafta aux épices grillées à la braise, frites fraîches maison, crème d\'ail parfumée, salade croquante et pain pita chaud.',
       price: 6500,
       category: 'cat-assiettes',
-      imageUrl: '/images/assiette_kafta.jpg',
+      imageUrl: './images/assiette_kafta.jpg',
       badge: 'Spécialité',
       available: true,
       order: 6
@@ -125,7 +125,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: '5 grands tenders de poulet panés minute, grande portion de frites fraîches dorées, sauce honey mustard et salade fraîche.',
       price: 5500,
       category: 'cat-assiettes',
-      imageUrl: '/images/chicken_tenders.jpg',
+      imageUrl: './images/chicken_tenders.jpg',
       badge: 'Nouveau',
       available: true,
       order: 7
@@ -136,7 +136,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: '1 Burger signature au choix (Classic, BBQ ou Crispy Chicken) + 1 portion de frites fraîches maison + 1 boisson fraîche 33cl au choix.',
       price: 6500,
       category: 'cat-menus',
-      imageUrl: '/images/menu_duo.jpg',
+      imageUrl: './images/menu_duo.jpg',
       badge: 'Top Formule',
       available: true,
       order: 8
@@ -147,7 +147,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: '2 Burgers gourmands au choix + 2 frites fraîches croustillantes + 2 sauces maison au choix + 2 boissons fraîches 33cl.',
       price: 12000,
       category: 'cat-menus',
-      imageUrl: '/images/menu_duo.jpg',
+      imageUrl: './images/menu_duo.jpg',
       badge: 'Promo Duo',
       available: true,
       order: 9
@@ -158,7 +158,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: 'Frites fraîches coupées à la main, nappées d\'une sauce cheddar chaude onctueuse, bacon croustillant émietté et rondelles de jalapeños.',
       price: 3000,
       category: 'cat-sides',
-      imageUrl: '/images/loaded_fries.jpg',
+      imageUrl: './images/loaded_fries.jpg',
       badge: 'À partager',
       available: true,
       order: 10
@@ -169,7 +169,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: '5 Filets de poulet marinés panés dans notre chapelure secrète croustillante, servis avec 2 sauces maison (BBQ et Mayo épicée).',
       price: 3500,
       category: 'cat-sides',
-      imageUrl: '/images/chicken_tenders.jpg',
+      imageUrl: './images/chicken_tenders.jpg',
       badge: 'Croustillant',
       available: true,
       order: 11
@@ -190,7 +190,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       description: 'Glace vanille artisanale onctueuse, lait entier, biscuits Oreo concassés, coulis de chocolat fondant et dôme de chantilly maison.',
       price: 3000,
       category: 'cat-drinks',
-      imageUrl: '/images/milkshake_oreo.jpg',
+      imageUrl: './images/milkshake_oreo.jpg',
       badge: 'Gourmand',
       available: true,
       order: 13
@@ -223,7 +223,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       id: 'gal-1',
       title: 'Le Double Smash Burger en cuisson vive',
       caption: 'Une croûte caramélisée inimitable et un cœur ultra juteux.',
-      imageUrl: '/images/burger_signature.jpg',
+      imageUrl: './images/burger_signature.jpg',
       order: 1,
       createdAt: '2025-01-10'
     },
@@ -231,7 +231,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       id: 'gal-2',
       title: 'Barbecue Bacon Burger croustillant',
       caption: 'Fumé au bois et nappé de notre sauce barbecue maison.',
-      imageUrl: '/images/bbq_burger.jpg',
+      imageUrl: './images/bbq_burger.jpg',
       order: 2,
       createdAt: '2025-01-12'
     },
@@ -239,7 +239,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       id: 'gal-3',
       title: 'Crispy Chicken Burger aux 7 épices',
       caption: 'Poulet ultra tendre et chapelure dorée extra croquante.',
-      imageUrl: '/images/crispy_chicken.jpg',
+      imageUrl: './images/crispy_chicken.jpg',
       order: 3,
       createdAt: '2025-01-15'
     },
@@ -247,7 +247,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       id: 'gal-4',
       title: 'L\'Assiette Kafta traditionnelle grillée',
       caption: 'Servie chaude avec frites maison, crème d\'ail et pain pita.',
-      imageUrl: '/images/assiette_kafta.jpg',
+      imageUrl: './images/assiette_kafta.jpg',
       order: 4,
       createdAt: '2025-01-18'
     },
@@ -255,7 +255,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       id: 'gal-5',
       title: 'Loaded Fries Cheddar fondant & Bacon',
       caption: 'La portion gourmande incontournable à partager entre amis.',
-      imageUrl: '/images/loaded_fries.jpg',
+      imageUrl: './images/loaded_fries.jpg',
       order: 5,
       createdAt: '2025-01-20'
     },
@@ -263,7 +263,7 @@ export const INITIAL_SITE_DATA: SiteData = {
       id: 'gal-6',
       title: 'Formule Duo Gourmande Burger & Co',
       caption: 'Le pack complet pour deux avec burgers, frites et boissons fraîches.',
-      imageUrl: '/images/menu_duo.jpg',
+      imageUrl: './images/menu_duo.jpg',
       order: 6,
       createdAt: '2025-01-25'
     }
